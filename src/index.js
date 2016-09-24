@@ -54,16 +54,16 @@ module.exports =
 
             const flowConfig = find(file, '.flowconfig')
             if (!flowConfig) {
-              if (!that.lastConfigError[file] ||
-                  that.lastConfigError[file] + 5 * 60 * 1000 < Date.now()) {
-                atom.notifications.addWarning(
-                '[Autocomplete-Flow] Missing .flowconfig file.'
-                , { detail: 'To get started with Flow, run `flow init`.'
-                  , dismissable: true,
-                  }
-                )
-                that.lastConfigError[file] = Date.now()
-              }
+              // if (!that.lastConfigError[file] ||
+              //     that.lastConfigError[file] + 5 * 60 * 1000 < Date.now()) {
+              //   atom.notifications.addWarning(
+              //   '[Autocomplete-Flow] Missing .flowconfig file.'
+              //   , { detail: 'To get started with Flow, run `flow init`.'
+              //     , dismissable: true,
+              //     }
+              //   )
+              //   that.lastConfigError[file] = Date.now()
+              // }
               return []
             }
 
